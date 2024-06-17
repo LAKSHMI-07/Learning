@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid cards</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    crossorigin="anonymous"
+  />
+  <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+section{
+    margin: 50px 150px;
+}
+    
+.recipe-list-items{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+  column-gap: 35px;
+  row-gap: 50px;
+  align-items: center;
+}
+
+
+.recipe-list-item .card-body h5{
+  color: #2E5974;
+  font-size: 13.9px;
+  font-weight: bold;
+ 
+}
+
+.recipe-list-item .card-body p{
+  color: rgb(55 56 61/60%);
+  font-size: 10px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  transition: all 0.8s ease;
+  opacity: 0;
+}
+
+.recipe-list-item .card-body a{
+  text-decoration: none;
+  color: #1B9AE5;
+  font-size: 11px;
+  font-weight: bold;
+  display: flex;
+  gap: 7px;
+}
+
+
+.recipe-list-item .card {
+  position: relative;
+  height: 196px;
+  overflow: hidden;
+  border: 0.8px solid rgb(130 130 130 / 40%);
+  transition: 
+  height 0.8s ease, 
+  border 0.8s ease, 
+  border-color 0.8s ease, 
+  border-width 0.8s ease,
+  padding 0.8s ease, 
+  width 0.8s ease,
+  transform 0.8s;
+}
+
+.recipe-list-item .card-body{
+  position: absolute;
+  top: 130px;
+  background-color: #ffffff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: top 0.8s ease;
+}
+
+.recipe-list-item .card img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transition: all 0.8s ease;
+}
+
+.recipe-list-item .card:hover {
+  transform: scaleY(1.06);
+  padding: 14px; 
+  border: 2px solid #4EA3A7;
+  /* width: calc(100% + 40px);
+  margin-left: calc(-40px / 2);
+  margin-right: calc(-0px / 2); */
+}
+
+.recipe-list-item .card:hover img {
+  height: 50%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  object-fit: cover;
+}
+
+.recipe-list-item .card:hover .card-body {
+  top: unset;
+  bottom: 0;
+  /* left: 13px;
+  padding: 10px 20px 10px 10px; */
+}
+
+.recipe-list-item .card:hover .card-body p {
+  opacity: 1;
+}
+
+
+
+</style>
+</head>
+<body>
+    
+    <section>
+        <div class="container">
+          <div class="recipe-list">
+            <div class="recipe-list-items">
+              <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/anti-agining-bar-red.png" alt="">
+                  <div class="card-body">
+                    <h5>Anti-aging bar (red)</h5>
+                    <p>A healthy stew that doesn't use flour or butter healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/turmeric-soy-latte.png" alt="">
+                  <div class="card-body">
+                    <h5>Turmeric soy latte</h5>
+                    <p>A healthy stew that doesn't use flour or butter that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/chicken-curry.png" alt="">
+                  <div class="card-body">
+                    <h5>Chicken curry cream stew</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/anti-agining-bar-cacao.png" alt="">
+                  <div class="card-body">
+                    <h5>Anti-aging bar (cacao)</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/moringa-cake.png" alt="">
+                  <div class="card-body">
+                    <h5>Moringa cake with black sesame</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/orange.png" alt="">
+                  <div class="card-body">
+                    <h5>Eye care drink (orange flavor)</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/pound-cake.png" alt="">
+                  <div class="card-body">
+                    <h5>Beet and raspberry jam pound cake (with lutein)</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/mct-coffee.png" alt="">
+                  <div class="card-body">
+                    <h5>MCT Coffee</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/bread-protein.png" alt="">
+                  <div class="card-body">
+                    <h5>Bread with cranberry protein</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/proteint-noodles.png" alt="">
+                  <div class="card-body">
+                    <h5>Protein chinese noodles</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/mct-jelly.png" alt="">
+                  <div class="card-body">
+                    <h5>MCT Jelly</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/beatroot-icecream.png" alt="">
+                  <div class="card-body">
+                    <h5>Beet ice cream made with coconut oil</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/salacia-tablet.png" alt="">
+                  <div class="card-body">
+                    <h5>Salacia extract tablet</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/jelly.png" alt="">
+                  <div class="card-body">
+                    <h5>Salacia jelly</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/fruit-cake.png" alt="">
+                  <div class="card-body">
+                    <h5>Salacia Furikake</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/plant-protein-drink.png" alt="">
+                  <div class="card-body">
+                    <h5>Plant protein drink</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/sports-drink.png" alt="">
+                  <div class="card-body">
+                    <h5>Sports drink (blueberry flavor)</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/salad-yelloe.png" alt="">
+                  <div class="card-body">
+                    <h5>Powdered salad dressing (yellow)</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/veg-soup.png" alt="">
+                  <div class="card-body">
+                    <h5>vegetable and bean curry soup</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+  
+               <div class="recipe-list-item">
+                <div class="card">
+                  <img src="images/recipe/red-smoothiee.png" alt="">
+                  <div class="card-body">
+                    <h5>Red Smoothie Stick Packet Type</h5>
+                    <p>A healthy stew that doesn't use flour or butter.</p>
+                    <a href="#">View Concept <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg></a>
+                  </div>
+                </div>
+               </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

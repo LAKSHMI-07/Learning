@@ -1,0 +1,25 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --rounded:12px;
+    --spacing:50px;
+}
+
+.parent{
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 12px;
+   height: auto;
+   padding: var(--spacing);
+   
+}
+
+
+.parent img{
+    width: 100%;
+    border-radius: var(--rounded);
+}

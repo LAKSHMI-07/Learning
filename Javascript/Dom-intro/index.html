@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 id="heading">Welcome to JS DOM <span id="spanName"></span></h1>
+            <input id="name" type="text" placeholder="Enter Your Name">
+            <button id="btn" onclick="nameAdd()">Click Me</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-center">
+            <h1 id="result">😎🚗🍟</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <input id="amount" type="number" placeholder="Enter the Amount">
+            <input id="person" type="number" placeholder="Enter No of Persons">
+            <button onclick="splitBill()">Split the bill</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-center">
+            <h1 id="bmiResult">Check Your BMI</h1>
+            <input id="height" type="number" placeholder="Enter Your height In CM">
+            <input id="weight" type="number" placeholder="Enter Your weight In Kg">
+            <button onclick="bmi()" >Calculate BMI</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
